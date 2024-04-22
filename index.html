@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ludo game</title>
+    <!-- Tailwind css -->
+    <link href="./src/output.css" rel="stylesheet">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <!-- Website logo -->
+    <link rel="shortcut icon" href="https://mir-s3-cdn-cf.behance.net/projects/404/c4a1ff168925835.Y3JvcCwxMDgwLDg0NCwwLDU2.jpg" type="image/x-icon">
+    <style>
+      #player {
+        width: 20px;
+        position: absolute;
+        bottom: 4px;
+        margin: 0px 8px;
+      }
+    </style>
+</head>
+<body class="flex items-center justify-center h-screen text-2xl">
+    <!-- Ludo board -->
+    <div class="relative ">
+      <table class="g-transparent ">
+        <!-- Row 1 -->
+        <tr>
+          <td colspan="6" rowspan="6" class="p-10 bg-green-500 cell">
+            <div class="flex flex-wrap w-full h-full p-5 bg-white border border-black">
+                <div class="flex justify-between w-full">
+                    <div class="w-12 h-12 bg-green-500 border border-black rounded-full">
+                      <!-- <img id="player" src="./Assets/green player.png" alt="green player_1"> -->
+                    </div>
+                    <div class="w-12 h-12 bg-green-500 border border-black rounded-full">
+                      <!-- <img id="player" src="./Assets/green player.png" alt="green player_1"> -->
+                    </div>
+                </div>
+                <div class="flex items-end justify-between w-full">
+                    <div class="w-12 h-12 bg-green-500 border border-black rounded-full"></div>
+                    <div class="w-12 h-12 bg-green-500 border border-black rounded-full"></div>
+                </div>
+            </div>
+          </td>
+          <td class="cell player_1_path" data-order="11"></td>
+          <td class="cell player_1_path" data-order="12"></td>
+          <td class="cell player_1_path" data-order="13"></td>
+          <td colspan="6" rowspan="6" class="p-10 bg-yellow-400 cell">
+            <div class="flex flex-wrap w-full h-full p-5 bg-white border border-black">
+                <div class="flex justify-between w-full">
+                    <div class="w-12 h-12 bg-yellow-400 border border-black rounded-full"></div>
+                    <div class="w-12 h-12 bg-yellow-400 border border-black rounded-full"></div>
+                </div>
+                <div class="flex items-end justify-between w-full">
+                    <div class="w-12 h-12 bg-yellow-400 border border-black rounded-full"></div>
+                    <div class="w-12 h-12 bg-yellow-400 border border-black rounded-full"></div>
+                </div>
+            </div>
+          </td>
+        </tr>
+        <!-- Row 2 -->
+        <tr>
+          <td class="cell player_1_path" data-order="10"></td>
+          <td class="bg-yellow-400 cell"></td>
+          <td class="bg-yellow-400 cell player_1_path" data-order="14"></td>
+        </tr>
+        <!-- Row 3 -->
+        <tr>
+          <td class="cell player_1_path" data-order="9"></td>
+          <td class="bg-yellow-400 cell"></td>
+          <td class="cell player_1_path" data-order="15"></td>
+        </tr>
+        <!-- Row 4 -->
+        <tr>
+          <td class="cell player_1_path" data-order="8"></td>
+          <td class="bg-yellow-400 cell"></td>
+          <td class="cell player_1_path" data-order="16"></td>
+        </tr>
+        <!-- Row 5 -->
+        <tr>
+          <td class="cell player_1_path" data-order="7"></td>
+          <td class="bg-yellow-400 cell"></td>
+          <td class="cell player_1_path" data-order="17"></td>
+        </tr>
+        <!-- Row 6 -->
+        <tr>
+          <td class="bg-white cell player_1_path" data-order="6"></td>
+          <td class="bg-yellow-400 cell"></td>
+          <td class="bg-white cell player_1_path" data-order="18"></td>
+        </tr>
+        <!-- Row 7 -->
+        <tr>
+          <td class="cell player_1_path" data-order="52"></td>
+          <td class="bg-green-500 cell player_1_path" data-order="1"></td>
+          <td class="cell player_1_path" data-order="2"></td>
+          <td class="cell player_1_path" data-order="3"></td>
+          <td class="cell player_1_path" data-order="4"></td>
+          <td class="bg-white cell player_1_path" data-order="5"></td>
+          <td colspan="3" rowspan="3" class="cell"></td>
+          <td class="bg-white cell player_1_path" data-order="19"></td>
+          <td class="cell player_1_path" data-order="20"></td>
+          <td class="cell player_1_path" data-order="21"></td>
+          <td class="cell player_1_path" data-order="22"></td>
+          <td class="cell player_1_path" data-order="23"></td>
+          <td class="cell player_1_path" data-order="24"></td>
+        </tr>
+        <!-- Row 8 -->
+        <tr>
+          <td class="cell player_1_path" data-order="51"></td>
+          <td class="bg-green-500 cell"></td>
+          <td class="bg-green-500 cell"></td>
+          <td class="bg-green-500 cell"></td>
+          <td class="bg-green-500 cell"></td>
+          <td class="bg-green-500 cell"></td>
+          <td class="cell bg-sky-400"></td>
+          <td class="cell bg-sky-400"></td>
+          <td class="cell bg-sky-400"></td>
+          <td class="cell bg-sky-400"></td>
+          <td class="cell bg-sky-400"></td>
+          <td class="cell player_1_path" data-order="25"></td>
+        </tr>
+        <!-- Row 9 -->
+        <tr>
+          <td class="cell player_1_path" data-order="50"></td>
+          <td class="cell player_1_path" data-order="49"></td>
+          <td class="cell player_1_path" data-order="48"></td>
+          <td class="cell player_1_path" data-order="47"></td>
+          <td class="cell player_1_path" data-order="46"></td>
+          <td class="bg-white cell player_1_path" data-order="45"></td>
+          <td class="bg-white cell player_1_path" data-order="31"></td>
+          <td class="cell player_1_path" data-order="30"></td>
+          <td class="cell player_1_path" data-order="29"></td>
+          <td class="cell player_1_path" data-order="28"></td>
+          <td class="cell bg-sky-400 player_1_path" data-order="27"></td>
+          <td class="cell player_1_path" data-order="26"></td>
+        </tr>
+        <!-- Row 10 -->
+        <tr>
+          <td colspan="6" rowspan="6" class="p-10 bg-red-500 cell">
+            <div class="flex flex-wrap w-full h-full p-5 bg-white border border-black">
+                <div class="flex justify-between w-full">
+                    <div class="w-12 h-12 bg-red-500 border border-black rounded-full"></div>
+                    <div class="w-12 h-12 bg-red-500 border border-black rounded-full"></div>
+                </div>
+                <div class="flex items-end justify-between w-full">
+                    <div class="w-12 h-12 bg-red-500 border border-black rounded-full"></div>
+                    <div class="w-12 h-12 bg-red-500 border border-black rounded-full"></div>
+                </div>
+            </div>
+          </td>
+          <td class="bg-white cell player_1_path" data-order="44"></td>
+          <td class="bg-red-500 cell"></td>
+          <td class="bg-white cell player_1_path" data-order="32"></td>
+          <td colspan="6" rowspan="6" class="p-10 cell bg-sky-400">
+            <div class="flex flex-wrap w-full h-full p-5 bg-white border border-black">
+                <div class="flex justify-between w-full">
+                    <div class="w-12 h-12 border border-black rounded-full bg-sky-400"></div>
+                    <div class="w-12 h-12 border border-black rounded-full bg-sky-400"></div>
+                </div>
+                <div class="flex items-end justify-between w-full">
+                    <div class="w-12 h-12 border border-black rounded-full bg-sky-400"></div>
+                    <div class="w-12 h-12 border border-black rounded-full bg-sky-400"></div>
+                </div>
+            </div>
+          </td>
+        </tr>
+        <!-- Row 11 -->
+        <tr>
+          <td class="cell player_1_path" data-order="43"></td>
+          <td class="bg-red-500 cell"></td>
+          <td class="cell player_1_path" data-order="33"></td>
+        </tr>
+        <!-- Row 12 -->
+        <tr>
+          <td class="cell player_1_path" data-order="42"></td>
+          <td class="bg-red-500 cell"></td>
+          <td class="cell player_1_path" data-order="34"></td>
+        </tr>
+        <!-- Row 13 -->
+        <tr>
+          <td class="cell player_1_path" data-order="41"></td>
+          <td class="bg-red-500 cell"></td>
+          <td class="cell player_1_path" data-order="35"></td>
+        </tr>
+        <!-- Row 14 -->
+        <tr>
+          <td class="bg-red-500 cell player_1_path" data-order="40"></td>
+          <td class="bg-red-500 cell"></td>
+          <td class="cell player_1_path" data-order="36"></td>
+        </tr>
+        <!-- Row 15 -->
+        <tr>
+          <td class="cell player_1_path" data-order="39"></td>
+          <td class="cell player_1_path" data-order="38"></td>
+          <td class="cell player_1_path" data-order="37"></td>
+        </tr>
+
+      </table>
+      <!-- Stars -->
+      <svg class="absolute w-8 top-[85px] left-[245px] opacity-60" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M287.9 0c9.2 0 17.6 5.2 21.6 13.5l68.6 141.3 153.2 22.6c9 1.3 16.5 7.6 19.3 16.3s.5 18.1-5.9 24.5L433.6 328.4l26.2 155.6c1.5 9-2.2 18.1-9.7 23.5s-17.3 6-25.3 1.7l-137-73.2L151 509.1c-8.1 4.3-17.9 3.7-25.3-1.7s-11.2-14.5-9.7-23.5l26.2-155.6L31.1 218.2c-6.5-6.4-8.7-15.9-5.9-24.5s10.3-14.9 19.3-16.3l153.2-22.6L266.3 13.5C270.4 5.2 278.7 0 287.9 0zm0 79L235.4 187.2c-3.5 7.1-10.2 12.1-18.1 13.3L99 217.9 184.9 303c5.5 5.5 8.1 13.3 6.8 21L171.4 443.7l105.2-56.2c7.1-3.8 15.6-3.8 22.6 0l105.2 56.2L384.2 324.1c-1.3-7.7 1.2-15.5 6.8-21l85.9-85.1L358.6 200.5c-7.8-1.2-14.6-6.1-18.1-13.3L287.9 79z"/></svg>
+      <svg class="absolute w-8 top-[245px] right-[85px] opacity-60" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M287.9 0c9.2 0 17.6 5.2 21.6 13.5l68.6 141.3 153.2 22.6c9 1.3 16.5 7.6 19.3 16.3s.5 18.1-5.9 24.5L433.6 328.4l26.2 155.6c1.5 9-2.2 18.1-9.7 23.5s-17.3 6-25.3 1.7l-137-73.2L151 509.1c-8.1 4.3-17.9 3.7-25.3-1.7s-11.2-14.5-9.7-23.5l26.2-155.6L31.1 218.2c-6.5-6.4-8.7-15.9-5.9-24.5s10.3-14.9 19.3-16.3l153.2-22.6L266.3 13.5C270.4 5.2 278.7 0 287.9 0zm0 79L235.4 187.2c-3.5 7.1-10.2 12.1-18.1 13.3L99 217.9 184.9 303c5.5 5.5 8.1 13.3 6.8 21L171.4 443.7l105.2-56.2c7.1-3.8 15.6-3.8 22.6 0l105.2 56.2L384.2 324.1c-1.3-7.7 1.2-15.5 6.8-21l85.9-85.1L358.6 200.5c-7.8-1.2-14.6-6.1-18.1-13.3L287.9 79z"/></svg>
+      <svg class="absolute w-8 bottom-[85px] right-[245px] opacity-60" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M287.9 0c9.2 0 17.6 5.2 21.6 13.5l68.6 141.3 153.2 22.6c9 1.3 16.5 7.6 19.3 16.3s.5 18.1-5.9 24.5L433.6 328.4l26.2 155.6c1.5 9-2.2 18.1-9.7 23.5s-17.3 6-25.3 1.7l-137-73.2L151 509.1c-8.1 4.3-17.9 3.7-25.3-1.7s-11.2-14.5-9.7-23.5l26.2-155.6L31.1 218.2c-6.5-6.4-8.7-15.9-5.9-24.5s10.3-14.9 19.3-16.3l153.2-22.6L266.3 13.5C270.4 5.2 278.7 0 287.9 0zm0 79L235.4 187.2c-3.5 7.1-10.2 12.1-18.1 13.3L99 217.9 184.9 303c5.5 5.5 8.1 13.3 6.8 21L171.4 443.7l105.2-56.2c7.1-3.8 15.6-3.8 22.6 0l105.2 56.2L384.2 324.1c-1.3-7.7 1.2-15.5 6.8-21l85.9-85.1L358.6 200.5c-7.8-1.2-14.6-6.1-18.1-13.3L287.9 79z"/></svg>
+      <svg class="absolute w-8 left-[85px] bottom-[245px] opacity-60" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M287.9 0c9.2 0 17.6 5.2 21.6 13.5l68.6 141.3 153.2 22.6c9 1.3 16.5 7.6 19.3 16.3s.5 18.1-5.9 24.5L433.6 328.4l26.2 155.6c1.5 9-2.2 18.1-9.7 23.5s-17.3 6-25.3 1.7l-137-73.2L151 509.1c-8.1 4.3-17.9 3.7-25.3-1.7s-11.2-14.5-9.7-23.5l26.2-155.6L31.1 218.2c-6.5-6.4-8.7-15.9-5.9-24.5s10.3-14.9 19.3-16.3l153.2-22.6L266.3 13.5C270.4 5.2 278.7 0 287.9 0zm0 79L235.4 187.2c-3.5 7.1-10.2 12.1-18.1 13.3L99 217.9 184.9 303c5.5 5.5 8.1 13.3 6.8 21L171.4 443.7l105.2-56.2c7.1-3.8 15.6-3.8 22.6 0l105.2 56.2L384.2 324.1c-1.3-7.7 1.2-15.5 6.8-21l85.9-85.1L358.6 200.5c-7.8-1.2-14.6-6.1-18.1-13.3L287.9 79z"/></svg>
+
+      <!-- Arrows -->
+      <svg class="absolute w-6 left-[8px] top-[286px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#22c55e" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+      <svg class="absolute w-6 right-[8px] rotate-180 top-[286px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#38bdf8" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+      <svg class="absolute w-6 top-[8px] rotate-90 left-[286px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#facc15" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+      <svg class="absolute w-6 bottom-[8px] rotate-[-90deg] left-[286px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#ff0000" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+    </div>
+
+      <!-- Board center win area -->
+      <div class="absolute rotate-45 w-[168px] h-[168px] flex flex-wrap z-[-1]">
+          <div class="w-1/2 bg-yellow-400 h-1/2"></div>
+          <div class="w-1/2 bg-sky-400 h-1/2"></div>
+          <div class="w-1/2 bg-green-500 h-1/2"></div>
+          <div class="w-1/2 bg-red-500 h-1/2"></div>
+      </div>
+
+    <!-- JavaScript -->
+    <script src="./script.js"></script>
+</body>
+</html>
